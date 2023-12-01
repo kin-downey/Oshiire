@@ -4,6 +4,7 @@ import Tiptap from '../components/Tiptap.vue'
 
 <template>
   <main>
+    {{ $route.params.id }}
     <Tiptap />
   </main>
 </template>
