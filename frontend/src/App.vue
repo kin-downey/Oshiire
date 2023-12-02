@@ -6,9 +6,14 @@ import Navi from './components/Navi.vue';
 
 <template>
   <v-app>
+    <div>
+
     <Navi />
     <Header />
-    <RouterView />
+    </div>
+    <v-main>
+      <RouterView />
+    </v-main>
   </v-app>
 </template>
 
