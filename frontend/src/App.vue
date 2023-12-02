@@ -1,10 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Header from './components/Header.vue'
+import Navi from './components/Navi.vue';
 </script>
 
 <template>
   <v-app>
+    <Navi />
     <Header />
     <RouterView />
   </v-app>
