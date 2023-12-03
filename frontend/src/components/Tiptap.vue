@@ -5,6 +5,7 @@
 <script>
 import { Editor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
+import Link from '@tiptap/extension-link'
 
 export default {
   components: {
@@ -22,6 +23,10 @@ export default {
       content: '<p>I’m running Tiptap with Vue.js. 🎉</p>',
       extensions: [
         StarterKit,
+        Link.configure({
+          openOnClick: true,
+          validate: href => /^http?:\/\//.test(href),
+        }),
       ],
     })
   },

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.3.67",
+    "@tiptap/extension-link": "^2.1.13",
     "@tiptap/pm": "^2.1.13",
     "@tiptap/starter-kit": "^2.1.13",
     "@tiptap/vue-3": "^2.1.13",
