@@ -7,6 +7,8 @@ import { Editor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 import Link from '@tiptap/extension-link'
 import Placeholder from '@tiptap/extension-placeholder'
+import Mention from '@tiptap/extension-mention'
+import suggestion from './suggestion.js'
 
 export default {
   components: {
@@ -30,6 +32,12 @@ export default {
         }),
         Placeholder.configure({
           placeholder: 'Write something …',
+        }),
+        Mention.configure({
+          HTMLAttributes: {
+            class: 'mention',
+          },
+          suggestion,
         }),
       ],
     })
@@ -59,12 +67,10 @@ export default {
   height: 0;
 }
 
-/* Placeholder (on every new line) */
-/*.tiptap p.is-empty::before {
-  content: attr(data-placeholder);
-  float: left;
-  color: #adb5bd;
-  pointer-events: none;
-  height: 0;
-}*/
+.mention {
+  border: 1px solid #000;
+  border-radius: 0.4rem;
+  padding: 0.1rem 0.3rem;
+  box-decoration-break: clone;
+}
 </style>
